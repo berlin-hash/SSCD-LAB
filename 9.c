@@ -119,7 +119,12 @@ void lru(char s[],char F[],int l,int f)
             {
                 for(m=k;m<top;m++)
                     F[m]=F[m+1];
-                F[top]=s[i];
+                 if (j != f)
+                {
+                    F[top - 1] = s[i];
+                }
+                else
+                    F[top] = s[i];
             }
         }
 
